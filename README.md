@@ -1,29 +1,46 @@
 # CNN-Fashion-MNIST-Classifier
 
-## Description
+## 📋 Description
+This project implements a **Convolutional Neural Network (CNN)** using **PyTorch** to classify images from the **Fashion-MNIST** dataset.  
+It covers data loading, model building, training, evaluation, and visualization of misclassified examples.
 
-This repository contains the implementation and training code for a Convolutional Neural Network (CNN) to perform image classification on the Fashion-MNIST dataset using PyTorch.
+---
 
-The project demonstrates loading the dataset, defining a standard CNN architecture, training the model with common optimization techniques, evaluating its performance, and visualizing some examples of misclassified images.
+## 📈 Project Workflow
 
-## Features
+### 1. Data Loading and Exploration
+- Downloaded the Fashion-MNIST training and testing datasets using `torchvision.datasets`.
+- Explored dataset dimensions, maximum pixel values, and label classes.
 
-* Loads the Fashion-MNIST training and testing datasets.
-* Defines a Convolutional Neural Network (CNN) model architecture.
-* Trains the CNN model using Adam optimizer and Cross-Entropy Loss.
-* Evaluates the trained model's accuracy and loss on the test set.
-* Visualizes examples of images that the model misclassified.
+### 2. Model Architecture
+- Built a **CNN model** with:
+  - Four convolutional layers followed by ReLU activations and MaxPooling.
+  - Fully connected layers with Dropout for regularization.
+- Output layer predicts one of the 10 Fashion-MNIST classes.
 
-## Technologies Used
+### 3. Training
+- Used **CrossEntropyLoss** as the loss function.
+- Optimized using the **Adam** optimizer with a learning rate of `0.001`.
+- Trained for **10 epochs** using a batch size of **128**.
 
-* Python
-* PyTorch (`torch`, `torch.nn`, `torch.optim`)
-* TorchVision (`torchvision.datasets`, `torchvision.transforms`)
-* Matplotlib (`matplotlib.pyplot`)
+### 4. Evaluation
+- Calculated the **Test Loss** and **Accuracy** on the test dataset.
+- Achieved approximately **92.9% accuracy** on the test set.
 
-## Setup
+### 5. Visualization
+- Displayed **examples of misclassified images** with predicted and true labels for deeper insight into model errors.
 
-To run this code locally, you need to have Python installed. Then, install the required libraries using pip:
+---
 
-```bash
-pip install torch torchvision matplotlib
+## 🛠️ Technologies Used
+- Python 3.x
+- PyTorch (`torch`, `torch.nn`, `torchvision`)
+- Matplotlib (`matplotlib.pyplot`)
+
+---
+
+## ⚙️ Setup
+
+1. Install required libraries:
+   ```bash
+   pip install torch torchvision matplotlib
